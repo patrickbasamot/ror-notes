@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   post "add_note", to: "notes#create"
   get "notes", to: "notes#index"
   get "notes/:id", to: "notes#show"
-
+  delete "notes/:id", to: "notes#destroy"
 
 
   root "notes#index"
