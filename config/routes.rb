@@ -3,4 +3,13 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+
+  get "add_note", to: "notes#new"
+  post "add_note", to: "notes#create"
+  get "notes", to: "notes#index"
+  get "notes/:id", to: "notes#show"
+
+
+
+  root "notes#index"
 end

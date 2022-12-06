@@ -1,0 +1,16 @@
+<h1>All Notes</h1>
+
+
+
+<ul>
+<% @notes.each do |note| %>
+    <li>
+        <a href="notes/<%=note.id%>">
+        <%= note.title %> 
+        </a>
+    </li>
+<% end %>
+</ul>
+
+
+<%= link_to "Create new", add_note_url %>

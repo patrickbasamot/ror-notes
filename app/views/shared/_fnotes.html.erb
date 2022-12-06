@@ -1,0 +1,40 @@
+
+
+<%
+=begin%>
+ <%= form_with model: @note do |form| %>
+
+<div>
+    <%= form.label :Title %>
+    <%= form.text_field :title %>
+</div>
+
+<div>
+    <%= form.label :Body %>
+    <%= form.text_field :body %>
+</div>
+
+<div>
+    <%= form.submit :Submit %>
+</div>
+<% end %> 
+<%
+=end%>
+
+
+<%= form_with model: @note, url: add_note_path do |form| %>
+  <div>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :body %><br>
+    <%= form.text_area :body %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
+
